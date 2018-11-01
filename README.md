@@ -29,7 +29,7 @@ The s3 key format is as follows:
 
 Each fileset is for a full day's worth of prices and is generated at approximately 00:01 UTC the following day. To be safe, you can assume all data files will be available by 00:10 UTC. So for example:
 
-`spotprices_20181001_123_us-east-1.json` represents prices between 2018-10-01T00:00 and 2018-10-01T23:59 UTC and will be available in the bucket by 2018-10-02T00:10 UTC.
+[`spotprices_20181030_604329154527_us-west-2.json`](https://s3.amazonaws.com/sample-spot-prices/spotprices_20181030_604329154527_us-west-2.json) represents prices between 2018-10-30T00:00 and 2018-10-30T23:59 UTC and will be available in the bucket by 2018-10-31T00:10 UTC.
 
 ## Requirements
 
