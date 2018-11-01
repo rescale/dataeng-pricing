@@ -1,0 +1,28 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": ["sudo yum update -y", "sudo amazon-linux-extras install postgresql10"]
+    }
+  ],
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "region": "us-west-2",
+      "profile": "default",
+      "source_ami_filter": {
+        "filters": {
+	  "virtualization-type": "hvm",
+	  "name": "amzn2-ami-hvm*x86_64-gp2"	  
+	},
+	"most_recent": true,
+	"owners": ["137112412989"]
+      },
+      "instance_type": "t2.nano",
+      "ssh_username": "ec2-user",
+      "ami_name": "bastion-{{timestamp}}",
+      "subnet_id": "subnet-47c0fe22"
+    }
+  ]
+}
+
