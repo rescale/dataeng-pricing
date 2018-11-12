@@ -71,4 +71,4 @@ Your submission should include:
 
 * Discussion of how to update the pipeline code after it has been deployed (also in README.md)
 
-The requirements are intentionally vague so feel free to ask questions along the way. There is no deadline for this but we do ask that you keep track of the amount of time you spend working on this. Target time to complete this is XXX hours.
+The requirements are intentionally vague so feel free to ask questions along the way. There is no deadline for this but we do ask that you keep track of the amount of time you spend working on this. Target time to complete this is 4 hours.
