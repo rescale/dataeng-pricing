@@ -23,13 +23,17 @@ You can add additional fields if you like. All of the above data will be availab
 
 Each day a new set of price dumps is deposited into the bucket: `s3://sample-spot-prices`. All data in the bucket should be publicly available.
 
-The s3 key format is as follows:
+The s3 key formats are as follows:
 
 `spotprices_<YYYYMMDD>_<account ID>_<region>.json`
+and
+`spotprices_<YYYYMMDD>_<account ID>_<region>.csv`
+
+The JSON and CSV files contain the same data for a given date and both are provided as a convenience. You only need to parse one of the 2.
 
 Each fileset is for a full day's worth of prices and is generated at approximately 00:01 UTC the following day. To be safe, you can assume all data files will be available by 00:10 UTC. So for example:
 
-[`spotprices_20181030_604329154527_us-west-2.json`](https://s3.amazonaws.com/sample-spot-prices/spotprices_20181030_604329154527_us-west-2.json) represents prices between 2018-10-30T00:00 and 2018-10-30T23:59 UTC and will be available in the bucket by 2018-10-31T00:10 UTC.
+[`spotprices_20181113_604329154527_us-west-2.json`](https://s3.amazonaws.com/sample-spot-prices/spotprices_20181113_604329154527_us-west-2.json) and [`spotprices_20181113_604329154527_us-west-2.csv`](https://s3.amazonaws.com/sample-spot-prices/spotprices_20181113_604329154527_us-west-2.csv) represent prices between 2018-11-13T00:00 and 2018-11-13T23:59 UTC and will be available in the bucket by 2018-11-14T00:10 UTC.
 
 ## Requirements
 
